@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar">
+    <span>ACME</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="vehiculo">Vehiculo</button>
+        <button mat-menu-item routerLink="propietario">Propietario</button>
+        <button mat-menu-item routerLink="conductor">Conductor</button>
+    </mat-menu>
+</mat-toolbar>
+<div class="contenido-general">
+    <router-outlet></router-outlet>
+</div>

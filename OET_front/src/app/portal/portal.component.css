@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.toolbar{
+    background-color: #0C7D74;
+    color: white;
+}
+.contenido-general{
+    padding: 10px;
+}

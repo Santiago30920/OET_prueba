@@ -2,7 +2,7 @@ export class Generico {
     /**
  * Que se realiza con el dto persistir, editar, listar
  */
-    operator: number = 0;
+    operacion?: number = 0;
     /**
      * retorna el nuevo objecto clonado
      * @param objeto a clonar
