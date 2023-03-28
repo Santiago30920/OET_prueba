@@ -36,6 +36,11 @@ class VehiculoController extends Controller
             $veiculo->propietario = $request->propietario;
 
             $veiculo->save();
+            return response()->json([
+                "status" => 200,
+                "message" => "Se almaceno correctamente", 
+                "code" => 1
+            ],200);
         }catch(Exception $e){
             return response()->json([
                 "status" => 500,

@@ -37,6 +37,11 @@ class ConductorController extends Controller
             $conductor->ciudad = $request->ciudad;
     
             $conductor->save();
+            return response()->json([
+                "status" => 200,
+                "message" => "Se almaceno correctamente", 
+                "code" => 1
+            ],200);
         }catch(Exception $e){
             return response()->json([
                 "status" => 500,

@@ -39,6 +39,11 @@ class PropietarioController extends Controller
             $propietario->ciudad = $request->ciudad;
     
             $propietario->save();
+            return response()->json([
+                "status" => 200,
+                "message" => "Se almaceno correctamente", 
+                "code" => 1
+            ],200);
         }catch(Exception $e){
             return response()->json([
                 "status" => 500,
