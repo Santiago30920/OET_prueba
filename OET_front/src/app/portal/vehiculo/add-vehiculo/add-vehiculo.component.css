@@ -19,3 +19,15 @@ button:hover{
     background-color: white;
     color: #0F353D;
 }
+@media (max-width: 600px) {
+    .inputs{
+        width: 100%;
+        display: block;
+    }
+    .mover{
+        margin-left: 0;
+    }
+    .inputs > .mat-form-field{
+        width: 100%;
+    }
+}
