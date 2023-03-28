@@ -56,7 +56,7 @@ class VehiculoController extends Controller
     public function update(Request $request, string $id)
     {
         try{
-            $response = Vehiculo::where('id', '=',$request->id)->update([
+            $response = Vehiculo::where('id', '=',$request->placa)->update([
                'placa'=> $request->placa,
                'color' => $request->color,
                'marca' => $request->marca,

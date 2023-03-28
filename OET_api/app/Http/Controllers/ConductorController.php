@@ -58,7 +58,7 @@ class ConductorController extends Controller
     {
         try{
 
-            $response = Conductores::where('id', '=',$request->id)->update([
+            $response = Conductores::where('id', '=',$request->numeroCedula)->update([
                'numeroCedula' => $request->numeroCedula,
                'primerNombre' => $request->primerNombre,
                'segundoNombre' => $request->segundoNombre,

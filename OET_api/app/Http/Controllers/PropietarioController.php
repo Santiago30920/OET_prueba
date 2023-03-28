@@ -60,7 +60,7 @@ class PropietarioController extends Controller
     {
         try{
 
-            $response = Propietarios::where('id', '=',$request->id)->update([
+            $response = Propietarios::where('id', '=',$request->numeroCedula)->update([
                'numeroCedula' => $request->numeroCedula,
                'primerNombre' => $request->primerNombre,
                'segundoNombre' => $request->segundoNombre,
