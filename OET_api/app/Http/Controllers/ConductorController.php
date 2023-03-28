@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Conductor;
+use App\Models\Conductores;
 use Exception;
 
 class ConductorController extends Controller
@@ -13,7 +13,7 @@ class ConductorController extends Controller
      */
     public function index()
     {
-        $conductores = Conductor::all();
+        $conductores = Conductores::all();
         return response()->json([
             "status" => 200,
             "message" => "user-get succesfully",
@@ -27,7 +27,7 @@ class ConductorController extends Controller
     public function store(Request $request)
     {
         try{
-            $conductor = new Conductor();
+            $conductor = new Conductores();
             $conductor->numeroCedula = $request->numeroCedula;
             $conductor->primerNombre = $request->primerNombre;
             $conductor->segundoNombre = $request->segundoNombre;
@@ -53,7 +53,7 @@ class ConductorController extends Controller
     {
         try{
 
-            $response = Conductor::where('id', '=',$request->id)->update([
+            $response = Conductores::where('id', '=',$request->id)->update([
                'numeroCedula' => $request->numeroCedula,
                'primerNombre' => $request->primerNombre,
                'segundoNombre' => $request->segundoNombre,

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Conductor extends Model
+class Conductores extends Model
 {
     use HasFactory;
     protected $fillable = ['numeroCedula', 'primerNombre','segundoNombre','apellidos', 'direccion', 'telefono', 'ciudad'];

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Propietario;
+use App\Models\Propietarios;
 use Exception;
 
 class PropietarioController extends Controller
@@ -13,7 +13,7 @@ class PropietarioController extends Controller
      */
     public function index()
     {
-        $propietarios = Propietario::all();
+        $propietarios = Propietarios::all();
         return response()->json([
             "status" => 200,
             "message" => "user-get succesfully",
@@ -29,7 +29,7 @@ class PropietarioController extends Controller
     {
         try{
 
-            $propietario = new Propietario();
+            $propietario = new Propietarios();
             $propietario->numeroCedula = $request->numeroCedula;
             $propietario->primerNombre = $request->primerNombre;
             $propietario->segundoNombre = $request->segundoNombre;
@@ -55,7 +55,7 @@ class PropietarioController extends Controller
     {
         try{
 
-            $response = Propietario::where('id', '=',$request->id)->update([
+            $response = Propietarios::where('id', '=',$request->id)->update([
                'numeroCedula' => $request->numeroCedula,
                'primerNombre' => $request->primerNombre,
                'segundoNombre' => $request->segundoNombre,

@@ -25,9 +25,9 @@ Route::get('vehiculo/consultar', [VehiculoController::class, "index"]);
 Route::post('vehiculo/crear', [VehiculoController::class, "store"]);
 Route::patch('vehiculo/editar/{id}', [VehiculoController::class, "update"]);
 
-Route::get('conducto/consultar', [ConductorController::class, "index"]);
-Route::post('conducto/crear', [ConductorController::class, "store"]);
-Route::patch('conducto/editar/{id}', [ConductorController::class, "update"]);
+Route::get('conductor/consultar', [ConductorController::class, "index"]);
+Route::post('conductor/crear', [ConductorController::class, "store"]);
+Route::patch('conductor/editar/{id}', [ConductorController::class, "update"]);
 
 Route::get('propietario/consultar', [PropietarioController::class, "index"]);
 Route::post('propietario/crear',  [PropietarioController::class, "store"]);
