@@ -18,14 +18,15 @@ export class PropietarioService implements Interface {
       .pipe(catchError(this.handleError));
   }
   editar(propietario: Propietario) {
+    delete propietario.operacion;
     return this.http.patch<Propietario>(
-      Epropietario.PROPIETARIO_EDITAR+"/"+propietario.id, propietario)
-       .pipe(catchError(this.handleError));
+      Epropietario.PROPIETARIO_EDITAR + "/" + propietario.numeroCedula, propietario)
+      .pipe(catchError(this.handleError));
   }
   listar() {
     return this.http.get<Propietario>(
       Epropietario.PROPIETARIO_LISTAR)
-       .pipe(catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
   /**
 * Operación para manejar los errores

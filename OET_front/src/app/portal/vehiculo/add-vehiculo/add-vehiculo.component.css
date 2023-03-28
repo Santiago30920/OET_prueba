@@ -1,0 +1,21 @@
+.inputs{
+    width: 100%;
+    display: inline-flex;
+}
+.inputs > .mat-form-field{
+    width: 47.5%;
+}
+.mover{
+    margin-left: 5%;
+}
+.mat-form-field{
+    width: 100%;
+}
+button{
+    background-color: #0F353D;
+    color: white;
+}
+button:hover{
+    background-color: white;
+    color: #0F353D;
+}

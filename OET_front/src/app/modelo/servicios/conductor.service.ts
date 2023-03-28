@@ -12,19 +12,21 @@ export class ConductorService implements Interface {
 
   constructor(private http: HttpClient) { }
   persistir(conductor: Conductor) {
+    delete conductor.operacion;
     return this.http.post<Conductor>(
-     EConductor.CONDUCTOR_PERSISTIR, conductor)
+      EConductor.CONDUCTOR_PERSISTIR, conductor)
       .pipe(catchError(this.handleError));
   }
   editar(conductor: Conductor) {
+    delete conductor.operacion;
     return this.http.patch<Conductor>(
-      EConductor.CONDUCTOR_EDITAR+"/"+conductor.id, conductor)
-       .pipe(catchError(this.handleError));
+      EConductor.CONDUCTOR_EDITAR + "/" + conductor.numeroCedula, conductor)
+      .pipe(catchError(this.handleError));
   }
   listar() {
     return this.http.get<Conductor>(
       EConductor.CONDUCTOR_LISTAR)
-       .pipe(catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
   /**
 * Operación para manejar los errores

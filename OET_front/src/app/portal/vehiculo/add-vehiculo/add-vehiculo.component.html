@@ -1,1 +1,49 @@
-<p>add-vehiculo works!</p>
+<h2 mat-dialog-title>Adminitrar Propietario</h2>
+<mat-dialog-content class="mat-typography">
+
+    <div class="inputs">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Placa</mat-label>
+            <input matInput [(ngModel)]="vehiculo.placa" [disabled]="disable">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill" class="mover">
+            <mat-label>Color</mat-label>
+            <input matInput [(ngModel)]="vehiculo.color">
+        </mat-form-field>
+    </div>
+    <div class="inputs">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Marca</mat-label>
+            <input matInput [(ngModel)]="vehiculo.marca">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="mover">
+            <mat-label>Tipo</mat-label>
+            <mat-select [(ngModel)]="vehiculo.tipo">
+                <mat-option value="particular">Particular</mat-option>
+                <mat-option value="publico">Publico</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="inputs">
+        <mat-form-field appearance="fill">
+            <mat-label>Propietario</mat-label>
+            <mat-select [(ngModel)]="vehiculo.propietario">
+                <mat-option *ngFor="let propietario of propietarios" [value]="propietario.primerNombre+' '+propietario.segundoNombre+' '+propietario.apellidos">
+                    {{propietario.primerNombre}}
+                  </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill"  class="mover">
+            <mat-label>Conductor</mat-label>
+            <mat-select [(ngModel)]="vehiculo.conductor">
+                <mat-option *ngFor="let conductor of conductores" [value]="conductor.primerNombre+' '+conductor.segundoNombre+' '+conductor.apellidos">
+                    {{conductor.primerNombre}}
+                  </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button cdkFocusInitial (click)="confirmar()">Confirmar</button>
+</mat-dialog-actions>

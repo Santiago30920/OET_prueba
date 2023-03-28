@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  .editar{
+    background-color: #FFAE00;
+    color: white;
+  }
+  .editar:hover{
+    background-color: white;
+    color: #FFAE00;
+  }
+  .contenido{
+    width: 30%;
+    display: inline-flex;
+  }
+  .contenido > button{
+    margin-right: 15px;
+    background-color: #0F353D;
+  }
+  .contenido > button:hover{
+    background-color: white;
+    color: #0F353D;
+  }
+  .contenido > .mat-form-field{
+    margin-top: -15px;
+  }

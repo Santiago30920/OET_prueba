@@ -12,13 +12,15 @@ export class VehiculoService implements Interface {
 
   constructor(private http: HttpClient) { }
   persistir(vehiculo: Vehiculo) {
+    delete vehiculo.operacion;
     return this.http.post<Vehiculo>(
       Evehiculo.VEHICULO_PERSISTIR, vehiculo)
       .pipe(catchError(this.handleError));
   }
   editar(vehiculo: Vehiculo) {
+    delete vehiculo.operacion;
     return this.http.patch<Vehiculo>(
-      Evehiculo.VEHICULO_EDITAR + "/" + vehiculo.id, vehiculo)
+      Evehiculo.VEHICULO_EDITAR + "/" + vehiculo.placa, vehiculo)
       .pipe(catchError(this.handleError));
   }
   listar() {

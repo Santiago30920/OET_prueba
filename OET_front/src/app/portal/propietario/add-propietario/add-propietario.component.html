@@ -18,7 +18,7 @@
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill" class="mover">
             <mat-label>Numero documento</mat-label>
-            <input matInput type="number" [(ngModel)]="propietario.numeroCedula">
+            <input matInput type="number" [(ngModel)]="propietario.numeroCedula" [disabled]="disable">
         </mat-form-field>
     </div>
     <div class="inputs">
