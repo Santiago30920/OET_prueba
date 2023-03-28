@@ -1,1 +1,42 @@
-<p>add-conductor works!</p>
+<h2 mat-dialog-title>Adminitrar Conductor</h2>
+<mat-dialog-content class="mat-typography">
+
+    <div class="inputs">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Primer Nombre</mat-label>
+            <input matInput [(ngModel)]="conductor.primerNombre">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill" class="mover">
+            <mat-label>Segundo Nombre</mat-label>
+            <input matInput [(ngModel)]="conductor.segundoNombre">
+        </mat-form-field>
+    </div>
+    <div class="inputs">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Apellidos</mat-label>
+            <input matInput [(ngModel)]="conductor.apellidos">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill" class="mover">
+            <mat-label>Numero documento</mat-label>
+            <input matInput type="number" [(ngModel)]="conductor.numeroCedula">
+        </mat-form-field>
+    </div>
+    <div class="inputs">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Telefono</mat-label>
+            <input matInput type="number" [(ngModel)]="conductor.telefono">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill" class="mover">
+            <mat-label>Ciudad</mat-label>
+            <input matInput [(ngModel)]="conductor.ciudad">
+        </mat-form-field>
+    </div>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Direccion</mat-label>
+        <input matInput [(ngModel)]="conductor.direccion">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button cdkFocusInitial (click)="confirmar()">Confirmar</button>
+</mat-dialog-actions>
