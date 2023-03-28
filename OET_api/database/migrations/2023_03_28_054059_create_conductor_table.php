@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('conductor', function (Blueprint $table) {
             $table->id();
-            $table->string('numeroCedula');
+            $table->integer('numeroCedula');
             $table->string('primerNombre');
             $table->string('segundoNombre');
             $table->string('apellidos');
             $table->string('direccion');
-            $table->string('telefono');
+            $table->integer('telefono');
             $table->string('ciudad');
             $table->timestamps();
         });
